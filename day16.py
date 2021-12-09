@@ -86,8 +86,6 @@ def part2(filename: str) -> int:
         for name, positions in names.items():
             if p in positions:
                 positions.remove(p)
-                if not positions:
-                    names_to_pop.append(name)
 
         for name in names_to_pop:
             del names[name]
