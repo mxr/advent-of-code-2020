@@ -53,11 +53,11 @@ class ShipWithWaypoint:
             self.y += self.wy * dist
         else:
             steps = ((-1) ** (direction == "L") * dist // 90) % len(DIRS)
-            if steps == 1 or steps == -3:
+            if steps in (1, -3):
                 self.wx, self.wy = -self.wy, self.wx
-            elif steps == 2 or steps == -2:
+            elif steps in (2, -2):
                 self.wx, self.wy = -self.wx, -self.wy
-            elif steps == 3 or steps == -1:
+            elif steps in (3, -1):
                 self.wx, self.wy = self.wy, -self.wx
             else:
                 # no movement
