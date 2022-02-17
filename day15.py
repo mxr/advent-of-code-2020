@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
+from __future__ import annotations
+
 from collections import Counter
 from typing import List
 
 
-def parse(filename: str) -> List[int]:
+def parse(filename: str) -> list[int]:
     with open(filename) as f:
         return [int(n) for n in f.read().split(",")]
 

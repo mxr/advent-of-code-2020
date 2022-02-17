@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+from __future__ import annotations
+
 from typing import List
 from typing import NamedTuple
 
@@ -8,7 +10,7 @@ class Land(NamedTuple):
 
 
 class Map:
-    def __init__(self, grid: List[List[Land]]) -> None:
+    def __init__(self, grid: list[list[Land]]) -> None:
         self.grid = grid
         self.width, self.height = len(grid[0]), len(grid)
 

@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+from __future__ import annotations
+
 from itertools import cycle
 from typing import Generator
 from typing import Iterable
@@ -12,10 +14,10 @@ SeatHash = NewType("SeatHash", Tuple[Tuple[str, ...], ...])
 
 
 class Ferry:
-    def __init__(self, seats: List[List[str]]):
+    def __init__(self, seats: list[list[str]]):
         self.seats = seats
         self.height, self.width = len(self.seats), len(self.seats[0])
-        self._seen: Set[SeatHash] = {self._hash()}
+        self._seen: set[SeatHash] = {self._hash()}
 
     def sit(self, part: int) -> bool:
         if part == 1:
@@ -101,7 +103,7 @@ class Ferry:
             if seat:
                 yield seat
 
-    def _collect(self, irange: Iterable[int], jrange: Iterable[int]) -> Optional[str]:
+    def _collect(self, irange: Iterable[int], jrange: Iterable[int]) -> str | None:
         return next(
             (
                 self.seats[i][j]

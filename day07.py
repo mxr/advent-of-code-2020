@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+from __future__ import annotations
+
 import functools
 import re
 from typing import Generator
@@ -8,7 +10,7 @@ from typing import Tuple
 RE = re.compile(r"(\d+) (\w+ \w+) bags?")
 
 
-def parse(filename: str) -> Generator[Tuple[str, List[Tuple[int, str]]], None, None]:
+def parse(filename: str) -> Generator[tuple[str, list[tuple[int, str]]], None, None]:
     with open(filename) as f:
         for line in f.readlines():
             first, _, rest = line.partition(" contain ")

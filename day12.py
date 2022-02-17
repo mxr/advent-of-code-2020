@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+from __future__ import annotations
+
 from typing import Generator
 from typing import Tuple
 
@@ -66,7 +68,7 @@ class ShipWithWaypoint:
         return abs(self.x) + abs(self.y)
 
 
-def parse(filename: str) -> Generator[Tuple[str, int], None, None]:
+def parse(filename: str) -> Generator[tuple[str, int], None, None]:
     with open(filename) as f:
         for line in f:
             yield line[0], int(line[1:])

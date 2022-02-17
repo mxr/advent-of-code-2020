@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+from __future__ import annotations
+
 import itertools
 from typing import Generator
 from typing import List
@@ -23,7 +25,7 @@ def part1(filename: str) -> int:
     return execute(instructions)[1]
 
 
-def execute(instructions: List[Instruction]) -> Tuple[bool, int]:
+def execute(instructions: list[Instruction]) -> tuple[bool, int]:
     seen = set()
     ip, acc = 0, 0
     while ip < len(instructions):

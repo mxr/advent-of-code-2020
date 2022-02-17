@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+from __future__ import annotations
+
 from itertools import tee
 from typing import Generator
 from typing import Iterable
@@ -8,13 +10,13 @@ from typing import TypeVar
 T = TypeVar("T")
 
 
-def pairwise(iterable: Iterable[T]) -> Iterable[Tuple[T, T]]:
+def pairwise(iterable: Iterable[T]) -> Iterable[tuple[T, T]]:
     a, b = tee(iterable)
     next(b, None)
     return zip(a, b)
 
 
-def parse(filename: str) -> Generator[Tuple[str, str], None, None]:
+def parse(filename: str) -> Generator[tuple[str, str], None, None]:
     with open(filename) as f:
         for raw in f:
             line = raw.strip()

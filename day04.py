@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+from __future__ import annotations
+
 import itertools
 import re
 from typing import Dict
@@ -28,7 +30,7 @@ KEYS = frozenset(
 OPTIONAL_KEYS = frozenset(("cid",))
 
 
-def parse(filename: str) -> Generator[Dict[str, str], None, None]:
+def parse(filename: str) -> Generator[dict[str, str], None, None]:
     with open(filename) as f:
         chunk = []
         # the ('', ) ensures the last chunk gets yielded
@@ -44,7 +46,7 @@ def part1(filename: str) -> int:
     return sum(validate_part1(chunk) for chunk in parse(filename))
 
 
-def validate_part1(chunk: Dict[str, str]) -> bool:
+def validate_part1(chunk: dict[str, str]) -> bool:
     return KEYS.difference(chunk) <= OPTIONAL_KEYS
 
 
@@ -52,7 +54,7 @@ def part2(filename: str) -> int:
     return sum(validate_part2(chunk) for chunk in parse(filename))
 
 
-def validate_part2(chunk: Dict[str, str]) -> bool:
+def validate_part2(chunk: dict[str, str]) -> bool:
     return (
         validate_part1(chunk)
         and validate_year(chunk["byr"], 1920, 2002)

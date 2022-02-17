@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+from __future__ import annotations
+
 import functools
 from collections import Counter
 from typing import Generator
