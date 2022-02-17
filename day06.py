@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
+from __future__ import annotations
+
 from typing import Generator
-from typing import List
-from typing import Set
 
 
-def parse(filename: str) -> Generator[List[Set[str]], None, None]:
+def parse(filename: str) -> Generator[list[set[str]], None, None]:
     with open(filename) as f:
         for chunk in f.read().split("\n\n"):
             yield [set(c) for c in chunk.split()]

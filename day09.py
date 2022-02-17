@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
+from __future__ import annotations
+
 from collections import deque
 from typing import Generator
 from typing import Iterable
-from typing import Tuple
 
 
 def parse(filename: str) -> Generator[int, None, None]:
@@ -26,7 +27,7 @@ def part1(filename: str) -> int:
     return -1
 
 
-def find(nums: Iterable[int], target: int) -> Tuple[int, int]:
+def find(nums: Iterable[int], target: int) -> tuple[int, int]:
     mapping = {target - n: n for n in nums}
     for n1, n2 in mapping.items():
         if n2 in mapping:

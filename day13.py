@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
+from __future__ import annotations
+
 import math
-from typing import Dict
 from typing import Generator
 
 
@@ -10,7 +11,7 @@ def parse_part1(filename: str) -> Generator[int, None, None]:
         yield from (int(t) for t in next(f).split(",") if not t.startswith("x"))
 
 
-def parse_part2(filename: str) -> Dict[int, int]:
+def parse_part2(filename: str) -> dict[int, int]:
     with open(filename) as f:
         next(f)
         return {

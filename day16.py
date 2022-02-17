@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
+from __future__ import annotations
+
 import re
 from collections import defaultdict
 from typing import List
 from typing import NamedTuple
 from typing import NewType
-from typing import Tuple
 
 RE = re.compile(r"(\d+)-(\d+)")
 
@@ -19,7 +20,7 @@ class Range(NamedTuple):
 
 class Rule(NamedTuple):
     name: str
-    ranges: List[Range]
+    ranges: list[Range]
 
     def valid(self, n: int) -> bool:
         return any(r.valid(n) for r in self.ranges)
@@ -28,7 +29,7 @@ class Rule(NamedTuple):
 Ticket = NewType("Ticket", List[int])
 
 
-def parse(filename: str) -> Tuple[List[Rule], Ticket, List[Ticket]]:
+def parse(filename: str) -> tuple[list[Rule], Ticket, list[Ticket]]:
     with open(filename) as f:
         raw_rules, raw_yours, raw_nearby = f.read().split("\n\n")
 
@@ -97,7 +98,7 @@ def part2(filename: str) -> int:
     return product
 
 
-def valid(ticket: Ticket, rules: List[Rule]) -> bool:
+def valid(ticket: Ticket, rules: list[Rule]) -> bool:
     return any(all(rule.valid(t) for t in ticket) for rule in rules)
 
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
+from __future__ import annotations
+
 from typing import Generator
-from typing import List
-from typing import Tuple
 
 
 def parse(filename: str) -> Generator[int, None, None]:
@@ -10,7 +10,7 @@ def parse(filename: str) -> Generator[int, None, None]:
             yield int(raw)
 
 
-def find(nums: List[int], target: int) -> Tuple[int, int]:
+def find(nums: list[int], target: int) -> tuple[int, int]:
     mapping = {target - n: n for n in nums}
     for n1, n2 in mapping.items():
         if n2 in mapping:

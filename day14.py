@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
+from __future__ import annotations
+
 import re
 from typing import Generator
-from typing import List
 from typing import NamedTuple
 
 
@@ -17,7 +18,7 @@ class MaskCommands(NamedTuple):
     mask: str
     mask0: int
     mask1: int
-    commands: List[Command]
+    commands: list[Command]
 
 
 def parse(filename: str) -> Generator[MaskCommands, None, None]:

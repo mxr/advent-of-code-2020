@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
+from __future__ import annotations
+
 import re
 from dataclasses import dataclass
 from typing import Generator
-from typing import Tuple
 
 RE = re.compile(r"(\d+)-(\d+)\s+(\w+):\s+(\w+)")
 
@@ -25,7 +26,7 @@ class Validator:
         # fmt: on
 
 
-def parse(filename: str) -> Generator[Tuple[Validator, str], None, None]:
+def parse(filename: str) -> Generator[tuple[Validator, str], None, None]:
     with open(filename) as f:
         for (left, right, char, pw) in RE.findall(f.read()):
             yield Validator(int(left), int(right), char), pw
