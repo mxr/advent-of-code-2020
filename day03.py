@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
-from typing import List
 from typing import NamedTuple
 
 

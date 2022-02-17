@@ -3,9 +3,7 @@ from __future__ import annotations
 
 import itertools
 from typing import Generator
-from typing import List
 from typing import NamedTuple
-from typing import Tuple
 
 
 class Instruction(NamedTuple):

@@ -4,10 +4,7 @@ from __future__ import annotations
 from itertools import cycle
 from typing import Generator
 from typing import Iterable
-from typing import List
 from typing import NewType
-from typing import Optional
-from typing import Set
 from typing import Tuple
 
 SeatHash = NewType("SeatHash", Tuple[Tuple[str, ...], ...])

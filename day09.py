@@ -4,7 +4,6 @@ from __future__ import annotations
 from collections import deque
 from typing import Generator
 from typing import Iterable
-from typing import Tuple
 
 
 def parse(filename: str) -> Generator[int, None, None]:

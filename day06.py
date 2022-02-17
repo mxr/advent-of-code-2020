@@ -2,8 +2,6 @@
 from __future__ import annotations
 
 from typing import Generator
-from typing import List
-from typing import Set
 
 
 def parse(filename: str) -> Generator[list[set[str]], None, None]:

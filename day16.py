@@ -6,7 +6,6 @@ from collections import defaultdict
 from typing import List
 from typing import NamedTuple
 from typing import NewType
-from typing import Tuple
 
 RE = re.compile(r"(\d+)-(\d+)")
 

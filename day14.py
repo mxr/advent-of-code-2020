@@ -3,7 +3,6 @@ from __future__ import annotations
 
 import re
 from typing import Generator
-from typing import List
 from typing import NamedTuple
 
 

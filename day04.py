@@ -3,7 +3,6 @@ from __future__ import annotations
 
 import itertools
 import re
-from typing import Dict
 from typing import Generator
 
 RE_PAIR = re.compile(r"(\w+):([#:\w]+)")

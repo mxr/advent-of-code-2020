@@ -2,8 +2,6 @@
 from __future__ import annotations
 
 from typing import Generator
-from typing import List
-from typing import Tuple
 
 
 def parse(filename: str) -> Generator[int, None, None]:

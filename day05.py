@@ -4,7 +4,6 @@ from __future__ import annotations
 from itertools import tee
 from typing import Generator
 from typing import Iterable
-from typing import Tuple
 from typing import TypeVar
 
 T = TypeVar("T")
