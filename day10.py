@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import functools
 from collections import Counter
-from typing import Generator
+from collections.abc import Generator
 
 
 def parse(filename: str) -> Generator[int, None, None]:

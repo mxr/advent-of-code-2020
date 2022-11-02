@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import math
-from typing import Generator
+from collections.abc import Generator
 
 
 def parse_part1(filename: str) -> Generator[int, None, None]:

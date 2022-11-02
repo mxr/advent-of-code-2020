@@ -1,8 +1,8 @@
 from __future__ import annotations
 
 from collections import deque
-from typing import Generator
-from typing import Iterable
+from collections.abc import Generator
+from collections.abc import Iterable
 
 
 def parse(filename: str) -> Generator[int, None, None]:

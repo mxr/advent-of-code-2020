@@ -3,8 +3,8 @@ from __future__ import annotations
 import functools
 from collections import Counter
 from collections import defaultdict
+from collections.abc import Generator
 from itertools import permutations
-from typing import Generator
 
 
 def parse(filename: str) -> Generator[Counter[str], None, None]:

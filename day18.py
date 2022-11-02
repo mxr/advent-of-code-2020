@@ -1,8 +1,8 @@
 from __future__ import annotations
 
+from collections.abc import Generator
 from operator import add
 from operator import mul
-from typing import Generator
 
 
 class Expr:

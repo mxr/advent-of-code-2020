@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import re
 from collections import defaultdict
-from typing import List
 from typing import NamedTuple
 from typing import NewType
 
@@ -25,7 +24,7 @@ class Rule(NamedTuple):
         return any(r.valid(n) for r in self.ranges)
 
 
-Ticket = NewType("Ticket", List[int])
+Ticket = NewType("Ticket", list[int])
 
 
 def parse(filename: str) -> tuple[list[Rule], Ticket, list[Ticket]]:

@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import itertools
-from typing import Generator
+from collections.abc import Generator
 from typing import NamedTuple
 
 
