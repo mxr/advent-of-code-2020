@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 from collections.abc import Generator
 from collections.abc import Iterable
 from itertools import tee

@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 import sys
 from argparse import ArgumentParser
 from collections.abc import Callable

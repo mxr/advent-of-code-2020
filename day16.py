@@ -1,8 +1,5 @@
-from __future__ import annotations
-
 import re
 from collections import defaultdict
-from typing import List
 from typing import NamedTuple
 from typing import NewType
 
