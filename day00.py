@@ -1,3 +1,6 @@
+from __future__ import annotations
+
+
 def parse(filename: str) -> str:
     with open(filename) as f:
         return f.read()
