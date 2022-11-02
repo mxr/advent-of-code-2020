@@ -1,8 +1,8 @@
 from __future__ import annotations
 
 from collections import defaultdict
+from collections.abc import Generator
 from itertools import product
-from typing import Generator
 
 
 class Cubes:

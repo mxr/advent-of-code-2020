@@ -4,7 +4,7 @@ import functools
 import re
 from collections import Counter
 from collections import defaultdict
-from typing import Generator
+from collections.abc import Generator
 from typing import NamedTuple
 from typing import NewType
 

@@ -1,12 +1,12 @@
 from __future__ import annotations
 
+from collections.abc import Generator
+from collections.abc import Iterable
 from itertools import cycle
-from typing import Generator
-from typing import Iterable
 from typing import NewType
 from typing import Tuple
 
-SeatHash = NewType("SeatHash", Tuple[Tuple[str, ...], ...])
+SeatHash = NewType("SeatHash", tuple[tuple[str, ...], ...])
 
 
 class Ferry:

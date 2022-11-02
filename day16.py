@@ -25,7 +25,7 @@ class Rule(NamedTuple):
         return any(r.valid(n) for r in self.ranges)
 
 
-Ticket = NewType("Ticket", List[int])
+Ticket = NewType("Ticket", list[int])
 
 
 def parse(filename: str) -> tuple[list[Rule], Ticket, list[Ticket]]:

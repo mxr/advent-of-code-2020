@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import functools
 import re
-from typing import Generator
+from collections.abc import Generator
 
 RE = re.compile(r"(\d+) (\w+ \w+) bags?")
 
