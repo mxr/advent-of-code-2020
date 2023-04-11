@@ -10,7 +10,6 @@ repos:
     rev: 0.16.0
     hooks:
     -   id: unimport
-        args: ["--remove"]  # remove after https://github.com/hakancelikdev/unimport/pull/270
 -   repo: https://github.com/asottile/reorder_python_imports
     rev: v3.9.0
     hooks:
