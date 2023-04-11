@@ -74,7 +74,7 @@ def parse(filename: str) -> Generator[tuple[str, int], None, None]:
 
 def part1(filename: str) -> int:
     s = Ship()
-    for (direction, dist) in parse(filename):
+    for direction, dist in parse(filename):
         s.move(direction, dist)
 
     return s.dist()
@@ -82,7 +82,7 @@ def part1(filename: str) -> int:
 
 def part2(filename: str) -> int:
     s = ShipWithWaypoint()
-    for (direction, dist) in parse(filename):
+    for direction, dist in parse(filename):
         s.move(direction, dist)
 
     return s.dist()

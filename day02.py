@@ -27,7 +27,7 @@ class Validator:
 
 def parse(filename: str) -> Generator[tuple[Validator, str], None, None]:
     with open(filename) as f:
-        for (left, right, char, pw) in RE.findall(f.read()):
+        for left, right, char, pw in RE.findall(f.read()):
             yield Validator(int(left), int(right), char), pw
 
 

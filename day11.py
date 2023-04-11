@@ -84,7 +84,7 @@ class Ferry:
         diag_225 = range(i + 1, self.height), range(j - 1, -1, -1)
         diag_315 = range(i - 1, -1, -1), range(j - 1, -1, -1)
 
-        for (irange, jrange) in (
+        for irange, jrange in (
             up,
             down,
             left,
